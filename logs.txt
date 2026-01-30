@@ -1,0 +1,47 @@
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55: | Initializing Variable Table
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55:   Using Variable File: /tmp/sample_variables
+04/02/2006/_13:21:55:  data line: node1=waltham
+04/02/2006/_13:21:55:  key: node1 - val: waltham
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55: | Reading Static Configuration Data
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55:   Cluster Name: Test_Cluster
+04/02/2006/_13:21:55:   Cluster Version: 7
+04/02/2006/_13:21:55:   Local Node Name: waltham
+04/02/2006/_13:21:55:   Cluster Nodes: waltham belmont
+04/02/2006/_13:21:55:   Found 1 Cluster Networks
+04/02/2006/_13:21:55:   Found 4 Cluster Interfaces/Device/Labels
+04/02/2006/_13:21:55:   Found 0 Cluster resource groups
+04/02/2006/_13:21:55:   Found 0 Cluster Resources
+04/02/2006/_13:21:55:   Event Timeout Value: 720
+04/02/2006/_13:21:55:   Maximum Timeout Value: 2880
+04/02/2006/_13:21:55:    nas stop working 
+04/02/2006/_13:21:55: | Building Test Queue python
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55:   Test Plan: /tmp/sample_event
+04/02/2006/_13:21:55:  Event 1: NODE_UP: NODE_UP,ALL,starts cluster services on all nodes
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55: | Validate NODE_UP
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55:   Event node: ALL
+04/02/2006/_13:21:55:   Configured nodes: waltham belmont
+04/02/2006/_13:21:55:  Event 2: NODE_DOWN_GRACEFUL: 
+NODE_DOWN_GRACEFUL,node1,stops cluster services gracefully on node1
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55: | python Validate NODE_DOWN_GRACEFUL
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55:   Event node: waltham
+04/02/2006/_13:21:55:   Configured nodes: waltham belmont
+04/02/2006/_13:21:55:  Event 3: WAIT: WAIT,20
+04/02/2006/_13:21:55:  Event 4: NODE_UP: NODE_UP,node1,starts cluster services on node1
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55: | Validate NODE_UP
+04/02/2006/_13:21:55: -------------------------------------------------------
+04/02/2006/_13:21:55:   python Event node: waltham
+04/02/2006/_13:21:55:   Configured nodes: waltham belmont
+04/02/2006/_13:21:55: 
+.
+.
+.
